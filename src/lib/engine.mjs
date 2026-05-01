@@ -3,7 +3,7 @@
 import OpenAI from "openai";
 
 // Master scope §0 hard rule: engine must be DeepSeek. We pin the default to
-// api.deepseek.com and reject any inherited proxy URL that points at Manus,
+// api.deepseek.com and reject any inherited proxy URL that points at any
 // Anthropic, or fal.ai — those are explicitly banned. Operators can override
 // to a self-hosted gateway by setting ENGINE_ALLOW_PROXY=true.
 function _pickBaseURL() {

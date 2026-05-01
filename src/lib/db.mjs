@@ -1,6 +1,6 @@
 /**
  * Postgres connection pool. Master scope §15B. SSL on for managed DBs.
- * Safe-fails when DATABASE_URL is missing (dev preview, image-only Manus run).
+ * Safe-fails when DATABASE_URL is missing (dev preview, image-only run).
  */
 import pg from "pg";
 const { Pool } = pg;

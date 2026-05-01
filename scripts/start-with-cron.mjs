@@ -45,6 +45,8 @@ async function main() {
   await run("migrate", ...script("migrate.mjs"));
   // Run seed once on boot (idempotent — ON CONFLICT updates).
   await run("seed", ...script("bulk-seed.mjs"));
+  // One-time pre-seed of 500 queued articles. Idempotent — ON CONFLICT DO NOTHING.
+  await run("queue-seed", ...script("seed-queue.mjs"));
   // Schedule crons.
   await bootCrons();
   // Start the Express server.

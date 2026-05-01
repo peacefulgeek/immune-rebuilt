@@ -45,6 +45,13 @@ CREATE TABLE IF NOT EXISTS article_queue (
 
 CREATE INDEX IF NOT EXISTS idx_queue_status_priority ON article_queue(status, priority, scheduled_for);
 
+-- Pre-seed columns: hold pre-vetted body so cron can publish without round-tripping DeepSeek
+ALTER TABLE article_queue ADD COLUMN IF NOT EXISTS excerpt TEXT;
+ALTER TABLE article_queue ADD COLUMN IF NOT EXISTS body TEXT;
+ALTER TABLE article_queue ADD COLUMN IF NOT EXISTS hero_url TEXT;
+ALTER TABLE article_queue ADD COLUMN IF NOT EXISTS hero_alt TEXT;
+ALTER TABLE article_queue ADD COLUMN IF NOT EXISTS word_count INTEGER;
+
 CREATE TABLE IF NOT EXISTS publish_log (
   id BIGSERIAL PRIMARY KEY,
   slug TEXT NOT NULL,

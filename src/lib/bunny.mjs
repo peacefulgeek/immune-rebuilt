@@ -6,8 +6,8 @@
 //   BUNNY_STORAGE_KEY     password for Storage API uploads
 //   BUNNY_STORAGE_HOST    storage.bunnycdn.com (default) or regional host
 //
-// During Manus preview these are absent, so resolveImageUrl returns the
-// /manus-storage/* path that survives webdev lifecycle. On DigitalOcean
+// During local preview these are absent, so resolveImageUrl returns the
+// pre-existing path that survives the local lifecycle. On DigitalOcean
 // production deploy with envs set, image URLs become https://<pullzone>/<path>.
 
 import fs from "node:fs";
@@ -22,7 +22,7 @@ export const BUNNY = {
 };
 
 // Resolve a stored asset key (e.g. "art/01-rootcauses.webp") to a public URL.
-// In preview without Bunny envs, fall through to manus-storage paths if a manifest
+// In preview without Bunny envs, fall through to existing paths if a manifest
 // mapping is provided.
 export function resolveImageUrl(key, fallbackMap = {}) {
   if (!key) return "";

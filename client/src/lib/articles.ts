@@ -1,7 +1,7 @@
 /**
  * Article data layer for the React client.
  * In production: hits /api/articles served by Express + Postgres.
- * In Manus preview / static mode: falls back to /content/preview-manifest.json
+ * In static-preview mode: falls back to /content/preview-manifest.json
  * that ships with the build for design-time browsing.
  */
 

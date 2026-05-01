@@ -1,7 +1,7 @@
 /**
  * Site 86 — Immune Rebuilt
  * Express server. Master scope §7. WWW→apex 301 is the FIRST middleware.
- * No Cloudflare, no Manus runtime, no Next.js. Pure Express + Vite SSR head injection.
+ * No Cloudflare, no third-party runtime, no Next.js. Pure Express + Vite SSR head injection.
  */
 import express, { type Request, type Response, type NextFunction } from "express";
 import compression from "compression";

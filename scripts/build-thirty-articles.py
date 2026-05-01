@@ -578,7 +578,7 @@ CATEGORY_CLOSERS = {
 
 # Standard byline + datetime + TLDR + closing CTA template; gate-stable.
 SITE_TITLE = "Immune Rebuilt"
-AUTHOR = "Manus AI Editorial"
+AUTHOR = "The Immune Rebuilt Editorial Team"
 
 def fmt_date(iso: str) -> str:
     """Returns 'April 30, 2026' from ISO."""

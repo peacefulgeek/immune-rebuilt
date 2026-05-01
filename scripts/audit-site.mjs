@@ -81,12 +81,12 @@ async function s5() {
   add("§5 DigitalOcean app.yaml", VERIFIED);
 }
 
-// §6 No Manus runtime / Cloudflare / Next / WordPress in shipped server code
+// §6 No banned platforms / Cloudflare / Next / WordPress in shipped server code
 async function s6() {
   // Skip self-references inside the audit script's own banned-list.
   const grep = execSync(`grep -RIn "manus.computer\\|cloudflare\\|wordpress\\|next/" ${ROOT}/server ${ROOT}/scripts ${ROOT}/src --exclude-dir=node_modules --exclude=audit-site.mjs --exclude=engine.mjs || true`).toString();
-  if (grep.trim()) return add("§6 No Manus/CF/Next/WP in server", BLOCKED("references found"), grep.split("\n")[0]);
-  add("§6 No Manus/CF/Next/WP in server", VERIFIED);
+  if (grep.trim()) return add("§6 No banned-platform/CF/Next/WP in server", BLOCKED("references found"), grep.split("\n")[0]);
+  add("§6 No banned-platform/CF/Next/WP in server", VERIFIED);
 }
 
 // §7 DB schema
@@ -325,8 +325,21 @@ async function main() {
       const d = articlePublishedAt(a).slice(0, 10);
       dist[d] = (dist[d] || 0) + 1;
     }
-    console.log(`published(seed)=${arts.length}, queued=0`);
-    for (const d of Object.keys(dist).sort().reverse()) console.log(`  ${d}  ${dist[d]}`);
+    const qm = readJsonSafe(path.join(ROOT, "client/public/content/queue-manifest.json"));
+    const qarts = manifestArticles(qm);
+    const qdist = {};
+    for (const a of qarts) {
+      const d = articlePublishedAt(a).slice(0, 10);
+      qdist[d] = (qdist[d] || 0) + 1;
+    }
+    const qkeys = Object.keys(qdist).sort();
+    const qfirst = qkeys[0] || "-";
+    const qlast = qkeys[qkeys.length - 1] || "-";
+    console.log(`published(seed)=${arts.length}, queued(seed)=${qarts.length}`);
+    console.log(`queue distinct_days=${qkeys.length}, queue range=${qfirst}..${qlast}`);
+    console.log(`published distinct_days=${Object.keys(dist).length}, published range=${Object.keys(dist).sort()[0]}..${Object.keys(dist).sort().reverse()[0]}`);
+    console.log(`(published cadence below)`);
+    for (const d of Object.keys(dist).sort().reverse().slice(0, 7)) console.log(`  ${d}  ${dist[d]}`);
   }
 
   // Discoverability sub-block

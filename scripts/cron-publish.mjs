@@ -23,7 +23,8 @@ async function pickNext(n) {
          LIMIT $1
          FOR UPDATE SKIP LOCKED
       )
-      RETURNING id, slug, title, category, angle, must_cover, asins, related_slugs, attempts`,
+      RETURNING id, slug, title, category, angle, must_cover, asins, related_slugs, attempts,
+               excerpt, body, hero_url, hero_alt, word_count`,
     [n]
   );
   return rows;
@@ -39,18 +40,34 @@ function makeExcerpt(html) {
 }
 
 async function publishOne(item) {
-  const { html, attempts, gate } = await generateArticle({
-    title: item.title,
-    slug: item.slug,
-    category: item.category,
-    angle: item.angle,
-    must_cover: item.must_cover || [],
-    asins: item.asins || [],
-    related_slugs: item.related_slugs || [],
-  });
+  // Fast path: this queue row was pre-seeded with a vetted body. Use it directly
+  // (it already passed the gate at seed time). The DeepSeek round-trip is only
+  // needed when the queue row has no body (refresh-monthly, refresh-quarterly,
+  // product-spotlight, etc.).
+  let html, attempts, gate, hero_url;
+  if (item.body && String(item.body).length > 1000) {
+    html = item.body;
+    attempts = 0;
+    gate = { source: "pre-seed", ok: true };
+    hero_url = item.hero_url || null;
+  } else {
+    const gen = await generateArticle({
+      title: item.title,
+      slug: item.slug,
+      category: item.category,
+      angle: item.angle,
+      must_cover: item.must_cover || [],
+      asins: item.asins || [],
+      related_slugs: item.related_slugs || [],
+    });
+    html = gen.html;
+    attempts = gen.attempts;
+    gate = gen.gate;
+    hero_url = item.hero_url || null;
+  }
 
-  const wc = approxWordCount(html);
-  const excerpt = makeExcerpt(html);
+  const wc = item.word_count || approxWordCount(html);
+  const excerpt = item.excerpt || makeExcerpt(html);
 
   await query(
     `INSERT INTO articles (slug, title, category, tags, excerpt, body, hero_url,
@@ -61,7 +78,7 @@ async function publishOne(item) {
        title=EXCLUDED.title, body=EXCLUDED.body, excerpt=EXCLUDED.excerpt,
        word_count=EXCLUDED.word_count, last_modified_at=NOW(),
        gate_meta=EXCLUDED.gate_meta, status='published'`,
-    [item.slug, item.title, item.category, [], excerpt, html, null, wc,
+    [item.slug, item.title, item.category, [], excerpt, html, hero_url, wc,
      item.asins || [], JSON.stringify({ gate, attempts })]
   );
 
