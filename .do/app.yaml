@@ -1,0 +1,105 @@
+name: autoimmune-reset
+region: nyc
+services:
+  - name: web
+    github:
+      repo: peacefulgeek/autoimmune-reset
+      branch: main
+      deploy_on_push: true
+    build_command: corepack enable && corepack prepare pnpm@10.4.1 --activate && pnpm install --frozen-lockfile=false && pnpm build
+    run_command: pnpm start
+    instance_size_slug: basic-xxs
+    instance_count: 1
+    http_port: 3000
+    health_check:
+      http_path: /healthz
+      initial_delay_seconds: 30
+      period_seconds: 30
+      timeout_seconds: 5
+      success_threshold: 1
+      failure_threshold: 3
+    routes:
+      - path: /
+    envs:
+      - key: NODE_ENV
+        scope: RUN_TIME
+        value: production
+      - key: PORT
+        scope: RUN_TIME
+        value: "3000"
+      - key: SITE_APEX
+        scope: RUN_TIME
+        value: theautoimmunereset.com
+      - key: SITE_NAME
+        scope: RUN_TIME
+        value: The Autoimmune Reset
+      - key: SITE_AUTHOR
+        scope: RUN_TIME
+        value: The Oracle Lover
+      - key: SITE_NICHE
+        scope: RUN_TIME
+        value: autoimmune root causes, AIP, leaky gut, functional medicine
+      - key: SISTER_SITE_URL
+        scope: RUN_TIME
+        value: https://theoraclelover.com
+      - key: AMAZON_AFFILIATE_TAG
+        scope: RUN_TIME
+        value: spankyspinola-20
+      - key: BUNNY_PULL_ZONE
+        scope: RUN_TIME
+        value: https://autoimmune-reset.b-cdn.net
+      - key: AUTO_GEN_ENABLED
+        scope: RUN_TIME
+        value: "true"
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: OPENAI_BASE_URL
+        scope: RUN_TIME
+        value: https://api.deepseek.com
+      - key: OPENAI_MODEL
+        scope: RUN_TIME
+        value: deepseek-v4-pro
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: BUNNY_STORAGE_ZONE
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: BUNNY_STORAGE_PASSWORD
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: SMTP_HOST
+        scope: RUN_TIME
+        value: smtp.zoho.com
+      - key: SMTP_PORT
+        scope: RUN_TIME
+        value: "587"
+      - key: SMTP_USER
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: SMTP_PASS
+        scope: RUN_TIME
+        type: SECRET
+        value: ""
+      - key: CONTACT_TO
+        scope: RUN_TIME
+        value: hello@theautoimmunereset.com
+domains:
+  - domain: theautoimmunereset.com
+    type: PRIMARY
+    zone: theautoimmunereset.com
+  - domain: www.theautoimmunereset.com
+    type: ALIAS
+    zone: theautoimmunereset.com
+databases:
+  - name: db
+    engine: PG
+    version: "16"
+    production: false
+    cluster_name: autoimmune-reset-db
