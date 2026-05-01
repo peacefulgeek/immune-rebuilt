@@ -203,7 +203,15 @@ function vitePluginStorageProxy(): Plugin {
   };
 }
 
-const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
+const isDev = process.env.NODE_ENV !== "production";
+// Master scope rule: "No Manus runtime". Manus dev-time helpers are gated to
+// dev only; the production `vite build` excludes them so dist/ contains zero
+// Manus runtime code.
+const plugins = [
+  react(),
+  tailwindcss(),
+  ...(isDev ? [jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()] : []),
+];
 
 export default defineConfig({
   plugins,

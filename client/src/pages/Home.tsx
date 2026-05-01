@@ -3,13 +3,13 @@ import { Link } from "wouter";
 import { fetchList, type ArticleCard, CATEGORIES } from "@/lib/articles";
 import { Sparkles, ArrowRight, Leaf, HeartPulse, Brain, Soup, Sun } from "lucide-react";
 
-const HERO_BG = "/manus-storage/ar-hero-meadow_7c7e75c3.webp";
+const HERO_BG = "https://conscious-elder.b-cdn.net/immune-rebuilt/ar-hero-meadow.webp";
 
 const COLLAGE = [
-  { src: "/manus-storage/ar-hero-pantry_b84fb324.webp",     label: "AIP-friendly pantry, painted in the morning light." },
-  { src: "/manus-storage/ar-hero-breath_ada4791b.webp",     label: "Vagal tone, hand on chest, the longer exhale." },
-  { src: "/manus-storage/ar-hero-microbiome_b2c03180.webp", label: "What the gut whispers to the immune system." },
-  { src: "/manus-storage/ar-hero-journal_dca16fec.webp",    label: "Slow journal pages, stress as data." },
+  { src: "https://conscious-elder.b-cdn.net/immune-rebuilt/ar-hero-pantry.webp",     label: "AIP-friendly pantry, painted in the morning light." },
+  { src: "https://conscious-elder.b-cdn.net/immune-rebuilt/ar-hero-breath.webp",     label: "Vagal tone, hand on chest, the longer exhale." },
+  { src: "https://conscious-elder.b-cdn.net/immune-rebuilt/ar-hero-microbiome.webp", label: "What the gut whispers to the immune system." },
+  { src: "https://conscious-elder.b-cdn.net/immune-rebuilt/ar-hero-journal.webp",    label: "Slow journal pages, stress as data." },
 ];
 
 const CATEGORY_DECOR: Record<string, { icon: any; tint: string }> = {

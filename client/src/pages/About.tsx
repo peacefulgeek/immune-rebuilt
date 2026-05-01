@@ -4,11 +4,11 @@ export default function About() {
       <div className="md:col-span-7">
         <p className="text-xs uppercase tracking-[.18em] text-[oklch(0.45_0.075_150)] mb-2">About this site</p>
         <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">
-          Why The Autoimmune Reset exists.
+          Why Immune Rebuilt exists.
         </h1>
         <div className="ar-prose mt-8">
           <p>
-            The Autoimmune Reset is a writing project. It is not a clinic. It is not a brand.
+            Immune Rebuilt is a writing project. It is not a clinic. It is not a brand.
             It is a long, careful conversation about why the immune system flares, what it's
             actually responding to, and how people in remission got there.
           </p>

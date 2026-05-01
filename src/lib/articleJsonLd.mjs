@@ -51,7 +51,7 @@ export function buildPersonJsonLd({ name, url, knowsAbout = [] }) {
     sameAs: [url],
     jobTitle: "Writer and editor",
     description:
-      "Spiritual writer and longtime student of contemplative practice; editor and reviewer for The Autoimmune Reset.",
+      "Spiritual writer and longtime student of contemplative practice; editor and reviewer for Immune Rebuilt.",
     knowsAbout,
   };
 }

@@ -10,6 +10,8 @@ import About from "./pages/About";
 import Disclosures from "./pages/Disclosures";
 import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
+import { AssessmentsIndex, AssessmentDetail } from "./pages/Assessments";
+import Apothecary from "./pages/Apothecary";
 import NotFound from "./pages/NotFound";
 import SiteShell from "./components/SiteShell";
 
@@ -23,6 +25,9 @@ function Router() {
       <Route path="/disclosures" component={Disclosures} />
       <Route path="/privacy" component={Privacy} />
       <Route path="/contact" component={Contact} />
+      <Route path="/assessments" component={AssessmentsIndex} />
+      <Route path="/assessments/:slug" component={AssessmentDetail} />
+      <Route path="/apothecary" component={Apothecary} />
       <Route component={NotFound} />
     </Switch>
   );

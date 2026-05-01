@@ -162,7 +162,7 @@ export function checkText(input) {
   const has_h2 = /<h2[\s>]/i.test(text);
   const internal_links = (text.match(/href="\/articles\//g) || []).length;
   const external_links = (text.match(/href="https?:\/\/(?!(?:[a-z0-9-]+\.)?theautoimmunereset\.com|theautoimmunereset\.com)/g) || []).length;
-  const self_ref = /(The Autoimmune Reset|this site|this library)/i.test(text);
+  const self_ref = /(Immune Rebuilt|this site|this library)/i.test(text);
 
   if (!tldr_present) reasons.push("missing_tldr");
   if (!has_h2) reasons.push("missing_h2_structure");

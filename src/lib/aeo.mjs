@@ -35,6 +35,8 @@ export function buildSitemapXml(rows, siteApex) {
   const staticPages = [
     { loc: `https://${siteApex}/`, priority: "1.0" },
     { loc: `https://${siteApex}/articles`, priority: "0.9" },
+    { loc: `https://${siteApex}/assessments`, priority: "0.85" },
+    { loc: `https://${siteApex}/apothecary`, priority: "0.85" },
     { loc: `https://${siteApex}/about`, priority: "0.7" },
     { loc: `https://${siteApex}/disclosures`, priority: "0.5" },
     { loc: `https://${siteApex}/privacy`, priority: "0.5" },

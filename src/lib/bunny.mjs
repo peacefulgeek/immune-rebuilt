@@ -1,8 +1,8 @@
 // Bunny CDN library. Master scope §9: ALL images served from Bunny as compressed WebP.
 // We accept multiple env names so production secrets can be wired without code changes.
 //
-//   BUNNY_PULL_ZONE_URL   e.g. https://autoimmune-reset.b-cdn.net
-//   BUNNY_STORAGE_ZONE    e.g. autoimmune-reset
+//   BUNNY_PULL_ZONE_URL   e.g. https://immune-rebuilt.b-cdn.net
+//   BUNNY_STORAGE_ZONE    e.g. immune-rebuilt
 //   BUNNY_STORAGE_KEY     password for Storage API uploads
 //   BUNNY_STORAGE_HOST    storage.bunnycdn.com (default) or regional host
 //

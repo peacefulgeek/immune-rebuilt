@@ -1,4 +1,4 @@
-// 30-article master plan for The Autoimmune Reset.
+// 30-article master plan for Immune Rebuilt.
 // 10 already exist in the seed manifest (we'll regenerate them at length to ensure 1500+ words);
 // 20 new ones are added across the same categories.
 

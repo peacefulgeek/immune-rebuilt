@@ -4,7 +4,7 @@
 - Strip em-dashes (—) and en-dashes (–), replace with comma+space.
 - Inject a TL;DR block as the second <p> if missing.
 - Ensure ≥3 internal /articles/ links (append a 'Related reading' line if short).
-- Ensure ≥1 self-reference to "The Autoimmune Reset" or "this library".
+- Ensure ≥1 self-reference to "Immune Rebuilt" or "this library".
 """
 import json, re, pathlib, sys
 
@@ -65,7 +65,7 @@ def ensure_internal(body: str, slug: str) -> str:
         return body
     pool = [s for s in EXTRA_INTERNAL if f'/articles/{slug}"' not in s]
     extras = pool[:needed]
-    line = ' Related reading from The Autoimmune Reset library: ' + ", ".join(extras) + '.'
+    line = ' Related reading from Immune Rebuilt library: ' + ", ".join(extras) + '.'
     # append to the last </p>
     if "</p>" in body:
         i = body.rfind("</p>")
@@ -74,9 +74,9 @@ def ensure_internal(body: str, slug: str) -> str:
 
 
 def ensure_self_ref(body: str) -> str:
-    if re.search(r"(The Autoimmune Reset|this library)", body):
+    if re.search(r"(Immune Rebuilt|this library)", body):
         return body
-    addition = ' The Autoimmune Reset will keep returning to this thread, because it sits underneath nearly every recovery story we cover in the library.'
+    addition = ' Immune Rebuilt will keep returning to this thread, because it sits underneath nearly every recovery story we cover in the library.'
     if "</p>" in body:
         i = body.rfind("</p>")
         return body[:i] + addition + body[i:]

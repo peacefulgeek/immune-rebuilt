@@ -1,5 +1,5 @@
 /**
- * Site 86 — The Autoimmune Reset
+ * Site 86 — Immune Rebuilt
  * Express server. Master scope §7. WWW→apex 301 is the FIRST middleware.
  * No Cloudflare, no Manus runtime, no Next.js. Pure Express + Vite SSR head injection.
  */
@@ -35,11 +35,11 @@ import { sendContactEmail } from "../src/lib/mail.mjs";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const SITE_APEX = process.env.SITE_APEX || "theautoimmunereset.com";
-const SITE_NAME = process.env.SITE_NAME || "The Autoimmune Reset";
+const SITE_APEX = process.env.SITE_APEX || "immunerebuilt.com";
+const SITE_NAME = process.env.SITE_NAME || "Immune Rebuilt";
 const SITE_AUTHOR = process.env.SITE_AUTHOR || "The Oracle Lover";
 const SISTER_SITE_URL = process.env.SISTER_SITE_URL || "https://theoraclelover.com";
-const BUNNY_PULL_ZONE = process.env.BUNNY_PULL_ZONE || "https://autoimmune-reset.b-cdn.net";
+const BUNNY_PULL_ZONE = process.env.BUNNY_PULL_ZONE || "https://immune-rebuilt.b-cdn.net";
 
 async function startServer() {
   const app = express();
@@ -306,14 +306,14 @@ async function startServer() {
   }
 
   // ── SSR routes for crawlers (head). React shell renders the rest client-side.
-  app.get(["/", "/articles", "/articles/:slug", "/about", "/disclosures", "/privacy", "/contact"], async (req, res, next) => {
+  app.get(["/", "/articles", "/articles/:slug", "/about", "/disclosures", "/privacy", "/contact", "/assessments", "/assessments/:slug", "/apothecary"], async (req, res, next) => {
     if (!fs.existsSync(indexHtmlPath)) return next();
     const raw = fs.readFileSync(indexHtmlPath, "utf8");
     let ctx: any = {
       req,
       kind: "home" as string,
       title: `${SITE_NAME} - Reverse the Fire Within` as string,
-      description: "Your immune system isn't attacking you. It's responding to something. The Autoimmune Reset helps you find what." as string,
+      description: "Your immune system isn't attacking you. It's responding to something. Immune Rebuilt helps you find what." as string,
       image: undefined as string | undefined,
       category: undefined as string | undefined,
       publishedAt: undefined as string | undefined,
@@ -326,13 +326,13 @@ async function startServer() {
       try {
         const article = await getPublishedArticleBySlug(slug);
         if (!article) {
-          ctx = { req, kind: "notfound", title: `Not found — ${SITE_NAME}`, description: `That article wasn't found on ${SITE_NAME}.` };
+          ctx = { req, kind: "notfound", title: `Not found , ${SITE_NAME}`, description: `That article was not found on ${SITE_NAME}.` };
         } else {
           ctx = {
             req,
             kind: "article",
             article,
-            title: `${article.title} — ${SITE_NAME}`,
+            title: `${article.title} , ${SITE_NAME}`,
             description: (article.excerpt || article.title).slice(0, 160),
             image: article.hero_url,
             category: article.category,
@@ -344,15 +344,21 @@ async function startServer() {
         // DB unreachable — fall through to home shell so the site still renders.
       }
     } else if (req.path === "/articles") {
-      ctx = { req, kind: "list", title: `Articles — ${SITE_NAME}`, description: "Every essay on autoimmune root causes, AIP, leaky gut, functional medicine, and the emotional roots underneath." };
+      ctx = { req, kind: "list", title: `Articles , ${SITE_NAME}`, description: "Every essay on autoimmune root causes, AIP, leaky gut, functional medicine, and the emotional roots underneath." };
     } else if (req.path === "/about") {
-      ctx = { req, kind: "page", title: `About — ${SITE_NAME}`, description: `Why ${SITE_NAME} exists. Who writes here. What we believe about chronic illness.` };
+      ctx = { req, kind: "page", title: `About , ${SITE_NAME}`, description: `Why ${SITE_NAME} exists. Who writes here. What we believe about chronic illness.` };
     } else if (req.path === "/disclosures") {
-      ctx = { req, kind: "page", title: `Disclosures — ${SITE_NAME}`, description: "Affiliate disclosure, medical disclaimer, and editorial standards for The Autoimmune Reset." };
+      ctx = { req, kind: "page", title: `Disclosures , ${SITE_NAME}`, description: "Affiliate disclosure, medical disclaimer, and editorial standards for Immune Rebuilt." };
     } else if (req.path === "/privacy") {
-      ctx = { req, kind: "page", title: `Privacy — ${SITE_NAME}`, description: "How The Autoimmune Reset handles personal information." };
+      ctx = { req, kind: "page", title: `Privacy , ${SITE_NAME}`, description: "How Immune Rebuilt handles personal information." };
     } else if (req.path === "/contact") {
-      ctx = { req, kind: "page", title: `Contact — ${SITE_NAME}`, description: `Reach The Autoimmune Reset.` };
+      ctx = { req, kind: "page", title: `Contact , ${SITE_NAME}`, description: `Reach Immune Rebuilt.` };
+    } else if (req.path === "/assessments") {
+      ctx = { req, kind: "page", title: `Self-screen assessments , ${SITE_NAME}`, description: `Eleven validated, free, browser-only screens for autoimmune-relevant patterns. Nothing leaves your device.` };
+    } else if (req.path.startsWith("/assessments/")) {
+      ctx = { req, kind: "page", title: `${SITE_NAME} self-screen`, description: `An interactive, browser-only screen with a TL;DR result and pointers to deeper essays.` };
+    } else if (req.path === "/apothecary") {
+      ctx = { req, kind: "page", title: `Apothecary , ${SITE_NAME}`, description: `Fifty considered supplements, herbs, and TCM items with one-line reasoning, cautions where they apply, and Amazon links.` };
     }
 
     res.set("Cache-Control", "public, max-age=3600");

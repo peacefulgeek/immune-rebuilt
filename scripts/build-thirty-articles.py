@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Deterministic article body builder for The Autoimmune Reset.
+Deterministic article body builder for Immune Rebuilt.
 
 For each of the 30 article specs in scripts/article-plan.mjs we emit a single
 JSON manifest entry with:
@@ -11,7 +11,7 @@ JSON manifest entry with:
     * has byline + datetime
     * contains >= 3 internal links into related slugs
     * contains >= 1 external authoritative link
-    * contains >= 1 self-reference to The Autoimmune Reset
+    * contains >= 1 self-reference to Immune Rebuilt
     * uses zero em-dashes and zero en-dashes
     * avoids the master-scope banned-word list
 
@@ -33,36 +33,36 @@ PUBLIC.mkdir(parents=True, exist_ok=True)
 
 # 30 hero image URLs, in the order matching article-plan.mjs (1-30).
 HERO_URLS = [
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-01-rootcauses-Hp9ZeSmBpRNwLD8tBzakXP.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-02-leakygut-VrgTFTcPVdwLDFhxznhxjC.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-03-aipdiet-LJtWHELpQpW2cXXAAEpW2P.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-04-stress-9oV9CPmamRwDvXWFXBwCKa.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-05-hashimotos-CpyMNcZwnUzcdMZqZAuiYP.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-06-mimicry-RgHuYZmxMcGAyL2hvRPcVS.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-07-ebv-LZAJ8q3Vqkt5XbRtSemKqx.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-08-wahls-iH8KJBaW2vT1jbDw99hFXR.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-09-trauma-K4FiQYqL4xkVqAZApXgi3a.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-10-supplements-Q3GcoRiQVoNcxXqaUjHRx5.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-11-vagus-UKHX49j5AmtrtZy3A72KTi.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-12-selenium-7c3Dr45K5m68rm7jgRtFw4.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-13-gimap-5bvaJYBaXqocVH7UD7RwJ4.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-14-ra-Hsm8777zkTprbBqFo9wv7w.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-15-lupus-dp3hFdivr5J7MRjD6WoALV.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-16-psoriasis-T2F9QPTeJHp4cfsHoStQEu.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-17-celiac-ncgs-kWinSzjzhpRDRkM3Z3qKdx.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-18-reintro-HYF2p6FbX76wFGAhWWz6RB.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-19-igg-Y9iaefQE7b45f46TGJJMD8.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-20-supplements-fkTdz6z2bQvwhf9BpijSDh.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-21-mito-n8EEhvG2ZGD6Z8wpdesZHw.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-22-sleep-P5gmEuFX8fyY2JAfz4PmaL.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-23-emotional-4YCZi8X4ZY7ktr6ZYPUSM4.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-24-somatic-b8nvTfKJLG9US9hGS4Enj7.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-25-exercise-iwS6aRKfq2CafLm3JSXj6A.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-26-environment-9kLPk2Vc73KX8eDCieF3ZY.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-27-ebv-fiRZ9ZhiUQktqTmpZEanZ4.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-28-perimenopause-Bex39eo5SnwDZ9AUgqkCn9.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-29-men-Ae8AFDktFh2WYqU99JkF8A.webp",
-    "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/Dao5KwyFAKSZxr4QTQ394u/art-30-kids-VKmKjSdVCr9jkVgYDaMVFF.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-01-rootcauses.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-02-leakygut.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-03-aipdiet.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-04-stress.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-05-hashimotos.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-06-mimicry.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-07-ebv.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-08-wahls.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-09-trauma.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-10-supplements.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-11-vagus.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-12-selenium.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-13-gimap.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-14-ra.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-15-lupus.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-16-psoriasis.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-17-celiac-ncgs.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-18-reintro.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-19-igg.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-20-supplements.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-21-mito.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-22-sleep.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-23-emotional.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-24-somatic.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-25-exercise.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-26-environment.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-27-ebv.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-28-perimenopause.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-29-men.webp",
+    "https://conscious-elder.b-cdn.net/immune-rebuilt/art-30-kids.webp",
 ]
 
 # Mirror of scripts/article-plan.mjs PLAN array. Kept here so the Python builder
@@ -552,7 +552,7 @@ CATEGORY_CLOSERS = {
     ),
     "Gut Healing": (
         "The gut is one node in a wider system. Heal it carefully, but do not let it become "
-        "the whole story. The wider story is what The Autoimmune Reset keeps returning to."
+        "the whole story. The wider story is what Immune Rebuilt keeps returning to."
     ),
     "AIP & Diet": (
         "Food is one of the most generous teachers an autoimmune patient gets, and one of the most "
@@ -577,7 +577,7 @@ CATEGORY_CLOSERS = {
 }
 
 # Standard byline + datetime + TLDR + closing CTA template; gate-stable.
-SITE_TITLE = "The Autoimmune Reset"
+SITE_TITLE = "Immune Rebuilt"
 AUTHOR = "Manus AI Editorial"
 
 def fmt_date(iso: str) -> str:

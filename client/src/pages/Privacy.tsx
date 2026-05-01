@@ -5,7 +5,7 @@ export default function Privacy() {
       <h1 className="text-3xl md:text-5xl font-semibold tracking-tight">Privacy</h1>
       <div className="ar-prose mt-8">
         <p>
-          The Autoimmune Reset is a small editorial site. We collect as little data as we can get away with.
+          Immune Rebuilt is a small editorial site. We collect as little data as we can get away with.
         </p>
         <h2>What we collect</h2>
         <p>

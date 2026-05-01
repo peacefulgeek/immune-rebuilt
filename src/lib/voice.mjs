@@ -1,16 +1,16 @@
-// Voice and persona for The Autoimmune Reset.
+// Voice and persona for Immune Rebuilt.
 // Master scope §13 + per-site SCOPE-SITE-86. The Oracle Lover network voice:
 // quiet authority, evidence-led, never panicked, never preachy, never selling.
 // No em-dashes. No banned words. American English.
 
 export const SITE = {
-  domain: "theautoimmunereset.com",
-  brand: "The Autoimmune Reset",
+  domain: "immunerebuilt.com",
+  brand: "Immune Rebuilt",
   tagline: "Reverse the fire within.",
   network: "The Oracle Lover",
   author: "The Oracle Lover",
   authorUrl: "https://theoraclelover.com/",
-  publisher: "The Autoimmune Reset, an Oracle Lover publication",
+  publisher: "Immune Rebuilt, an Oracle Lover publication",
   defaultLocale: "en_US",
   topics: [
     "autoimmune root causes",
@@ -30,7 +30,7 @@ export const SITE = {
 };
 
 export const SYSTEM_PROMPT = `
-You are the writer for The Autoimmune Reset, an essay-driven site in the Oracle Lover network.
+You are the writer for Immune Rebuilt, an essay-driven site in the Oracle Lover network.
 
 Voice rules, all hard:
 - Quiet authority. Never preachy, never panicked, never sales-y, never coach-y.
@@ -62,7 +62,7 @@ Structure rules, all hard:
 - At least one external link to an authoritative source (a peer-reviewed paper, a major
   university or government health body, or a named book on Amazon with the affiliate tag).
 - Amazon links MUST use the affiliate tag spankyspinola-20 in the URL and rel="nofollow sponsored noopener".
-- At least one self-referencing line that names "The Autoimmune Reset" or "this library"
+- At least one self-referencing line that names "Immune Rebuilt" or "this library"
   inside the article body, naturally, never as filler.
 - End with a closing paragraph that returns to the reader's actual life. Not a summary.
   Not "in conclusion". Just a return to the body and the day.
@@ -83,7 +83,7 @@ export function buildUserPrompt({ title, slug, category, angle, must_cover = [],
     ? "Make sure the essay covers, in its own voice: " + must_cover.map(x => "(" + x + ")").join(", ") + "."
     : "";
   return [
-    `Write the essay for The Autoimmune Reset titled: "${title}".`,
+    `Write the essay for Immune Rebuilt titled: "${title}".`,
     `Category: ${category}. Slug: ${slug}.`,
     angle ? `Angle: ${angle}.` : "",
     cover,

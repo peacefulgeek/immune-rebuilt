@@ -1,5 +1,5 @@
 import { Link, useLocation } from "wouter";
-import { Home as HomeIcon, Search, Bookmark, Info } from "lucide-react";
+import { Home as HomeIcon, Search, Sparkles, FlaskConical, Info } from "lucide-react";
 
 export default function SiteShell({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
@@ -20,7 +20,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
             </span>
             <span className="leading-tight">
               <span className="block font-[var(--font-display)] text-[1.05rem] font-semibold tracking-tight">
-                The Autoimmune Reset
+                Immune Rebuilt
               </span>
               <span className="block text-[11px] uppercase tracking-[.18em] text-[oklch(0.45_0.02_145)]">
                 Reverse the fire within
@@ -30,6 +30,8 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
           <nav className="hidden md:flex items-center gap-1">
             <NavPill href="/" active={isActive("/")}>Home</NavPill>
             <NavPill href="/articles" active={isActive("/articles")}>Articles</NavPill>
+            <NavPill href="/assessments" active={isActive("/assessments")}>Assessments</NavPill>
+            <NavPill href="/apothecary" active={isActive("/apothecary")}>Apothecary</NavPill>
             <NavPill href="/about" active={isActive("/about")}>About</NavPill>
             <NavPill href="/contact" active={isActive("/contact")}>Contact</NavPill>
           </nav>
@@ -52,6 +54,8 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
             <h4 className="text-sm font-semibold tracking-wide uppercase mb-3 text-[oklch(0.40_0.04_152)]">Read</h4>
             <ul className="space-y-1.5 text-sm">
               <li><Link href="/articles" className="hover:underline">All articles</Link></li>
+              <li><Link href="/assessments" className="hover:underline">Self-screen assessments</Link></li>
+              <li><Link href="/apothecary" className="hover:underline">Apothecary</Link></li>
               <li><Link href="/about" className="hover:underline">About this site</Link></li>
               <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             </ul>
@@ -71,7 +75,7 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
         </div>
         <div className="border-t border-[oklch(0.88_0.015_95)]">
           <div className="container py-5 text-xs text-[oklch(0.45_0.02_145)] flex flex-wrap items-center justify-between gap-3">
-            <span>© {new Date().getFullYear()} The Autoimmune Reset. Educational; not medical advice.</span>
+            <span>© {new Date().getFullYear()} Immune Rebuilt. Educational; not medical advice.</span>
             <span>Hand-built. Reader supported.</span>
           </div>
         </div>
@@ -79,10 +83,11 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
 
       {/* ── Mobile bottom tab bar ─────────────────────────────────── */}
       <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 border-t border-[oklch(0.88_0.015_95)] bg-[oklch(0.974_0.012_95/0.94)] backdrop-blur-md">
-        <ul className="grid grid-cols-4">
+        <ul className="grid grid-cols-5">
           <BottomTab href="/" icon={<HomeIcon className="h-5 w-5" />} label="Home" active={isActive("/")} />
-          <BottomTab href="/articles" icon={<Search className="h-5 w-5" />} label="Search" active={isActive("/articles")} />
-          <BottomTab href="/articles?saved=1" icon={<Bookmark className="h-5 w-5" />} label="Saved" active={false} />
+          <BottomTab href="/articles" icon={<Search className="h-5 w-5" />} label="Read" active={isActive("/articles")} />
+          <BottomTab href="/assessments" icon={<Sparkles className="h-5 w-5" />} label="Screen" active={isActive("/assessments")} />
+          <BottomTab href="/apothecary" icon={<FlaskConical className="h-5 w-5" />} label="Apothecary" active={isActive("/apothecary")} />
           <BottomTab href="/about" icon={<Info className="h-5 w-5" />} label="About" active={isActive("/about")} />
         </ul>
       </nav>

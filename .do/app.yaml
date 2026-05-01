@@ -1,9 +1,9 @@
-name: autoimmune-reset
+name: immune-rebuilt
 region: nyc
 services:
   - name: web
     github:
-      repo: peacefulgeek/autoimmune-reset
+      repo: peacefulgeek/immune-rebuilt
       branch: main
       deploy_on_push: true
     build_command: corepack enable && corepack prepare pnpm@10.4.1 --activate && pnpm install --frozen-lockfile=false && pnpm build
@@ -29,10 +29,10 @@ services:
         value: "3000"
       - key: SITE_APEX
         scope: RUN_TIME
-        value: theautoimmunereset.com
+        value: immunerebuilt.com
       - key: SITE_NAME
         scope: RUN_TIME
-        value: The Autoimmune Reset
+        value: Immune Rebuilt
       - key: SITE_AUTHOR
         scope: RUN_TIME
         value: The Oracle Lover
@@ -47,7 +47,9 @@ services:
         value: spankyspinola-20
       - key: BUNNY_PULL_ZONE
         scope: RUN_TIME
-        value: https://autoimmune-reset.b-cdn.net
+        value: https://conscious-elder.b-cdn.net/immune-rebuilt
+      # Note: dedicated immune-rebuilt.b-cdn.net zone exists; flip BUNNY_PULL_ZONE
+      # to https://immune-rebuilt.b-cdn.net once its Storage AccessKey is provided.
       - key: AUTO_GEN_ENABLED
         scope: RUN_TIME
         value: "true"
@@ -89,17 +91,17 @@ services:
         value: ""
       - key: CONTACT_TO
         scope: RUN_TIME
-        value: hello@theautoimmunereset.com
+        value: hello@immunerebuilt.com
 domains:
-  - domain: theautoimmunereset.com
+  - domain: immunerebuilt.com
     type: PRIMARY
-    zone: theautoimmunereset.com
-  - domain: www.theautoimmunereset.com
+    zone: immunerebuilt.com
+  - domain: www.immunerebuilt.com
     type: ALIAS
-    zone: theautoimmunereset.com
+    zone: immunerebuilt.com
 databases:
   - name: db
     engine: PG
     version: "16"
     production: false
-    cluster_name: autoimmune-reset-db
+    cluster_name: immune-rebuilt-db

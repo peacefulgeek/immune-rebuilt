@@ -6,7 +6,7 @@ export default function Disclosures() {
       <div className="ar-prose mt-8">
         <h2>Affiliate disclosure</h2>
         <p>
-          The Autoimmune Reset participates in the Amazon Associates program. When you click a book
+          Immune Rebuilt participates in the Amazon Associates program. When you click a book
           or product link in an essay and buy something, we may earn a small commission at no
           additional cost to you. Our Amazon affiliate tag is <code>spankyspinola-20</code>.
         </p>
@@ -17,7 +17,7 @@ export default function Disclosures() {
         </p>
         <h2>Medical disclaimer</h2>
         <p>
-          The Autoimmune Reset is for educational purposes only. It is not medical advice and is not
+          Immune Rebuilt is for educational purposes only. It is not medical advice and is not
           a substitute for diagnosis or treatment from a qualified healthcare professional.
           Autoimmune conditions are serious and require medical supervision. Always work with your
           rheumatologist, endocrinologist, or functional-medicine practitioner before changing
