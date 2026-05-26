@@ -20,8 +20,13 @@ async function main() {
 
   const raw = fs.readFileSync(MANIFEST, "utf8");
   const manifest = JSON.parse(raw);
-  const items = manifest.items || [];
-  console.log(`[seed] ${items.length} articles in manifest`);
+  let items = manifest.articles || manifest.items || [];
+  const CAP = Number(process.env.PUBLISH_CAP || 100);
+  if (items.length > CAP) {
+    console.log(`[seed] capping publishes at PUBLISH_CAP=${CAP} (manifest has ${items.length})`);
+    items = items.slice(0, CAP);
+  }
+  console.log(`[seed] ${items.length} articles will be seeded as published (cap=${CAP})`);
 
   let inserted = 0, updated = 0, skipped = 0;
 

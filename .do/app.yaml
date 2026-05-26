@@ -53,6 +53,12 @@ services:
       - key: AUTO_GEN_ENABLED
         scope: RUN_TIME
         value: "true"
+      - key: PUBLISH_CAP
+        scope: RUN_TIME
+        value: "100"
+      - key: PUBLISH_PER_TICK
+        scope: RUN_TIME
+        value: "1"
       - key: OPENAI_API_KEY
         scope: RUN_TIME
         type: SECRET

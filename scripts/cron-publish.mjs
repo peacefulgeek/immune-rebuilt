@@ -119,9 +119,20 @@ async function main() {
     return;
   }
 
-  const items = await pickNext(PER_TICK);
+  // Safety guard: refuse to publish more than PUBLISH_CAP total
+  const CAP = Number(process.env.PUBLISH_CAP || 100);
+  const capRow = await query(`SELECT COUNT(*)::int AS n FROM articles WHERE status='published'`);
+  const currentlyPublished = capRow.rows[0]?.n || 0;
+  if (currentlyPublished >= CAP) {
+    console.log(`[publish] PUBLISH_CAP=${CAP} reached (current=${currentlyPublished}); holding queue`);
+    return;
+  }
+  const room = Math.max(0, CAP - currentlyPublished);
+  const takeN = Math.min(PER_TICK, room);
+
+  const items = await pickNext(takeN);
   if (!items.length) {
-    console.log("[publish] queue empty");
+    console.log("[publish] queue empty or cap reached");
     return;
   }
   for (const item of items) {

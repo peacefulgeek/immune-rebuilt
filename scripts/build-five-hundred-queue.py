@@ -619,7 +619,7 @@ def derive_clauses(spec: dict) -> dict[str, str]:
         ),
         "ANGLE_PERSON_CLAUSE": (
             f"For readers carrying the version of this story tied to {humanise_slug(spec['slug'])}, "
-            f"the takeaway is the same: this lever is yours; use it slowly, and let the body teach you the dose."
+            f"bottom line is the same: this lever is yours; use it slowly, and let the body teach you the dose."
         ),
         "SITE_NOTE": (
             f'You can keep this in mind as you read other pieces in the {SITE_TITLE} library; '

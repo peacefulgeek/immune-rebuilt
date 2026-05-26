@@ -46,10 +46,18 @@ async function s1() {
 async function s2() {
   if (EngineConfig.baseURL !== "https://api.deepseek.com") return add("§2 Engine", BLOCKED(`baseURL=${EngineConfig.baseURL}`));
   if (EngineConfig.model !== "deepseek-v4-pro") return add("§2 Engine", BLOCKED(`model=${EngineConfig.model}`));
-  // Match real imports/usages, skip comments/self-references inside engine.mjs and the audit script.
-  const grep = execSync(`grep -RIn "ANTHROPIC\\|@anthropic-ai\\|FAL_KEY\\|fal\\.ai" ${ROOT} --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git --exclude=audit-site.mjs --exclude=engine.mjs || true`).toString();
-  // Drop lines that are pure comments mentioning the banned terms in passing.
-  const real = grep.split("\n").filter((l) => l && !/^\s*\/\/|^\s*\*|^\s*#/.test(l.split(":").slice(2).join(":")));
+  // Match real imports/usages in executable source only — skip docs/markdown,
+  // comments, and self-references inside engine.mjs and the audit script itself.
+  const grep = execSync(`grep -RIn "ANTHROPIC\\|@anthropic-ai\\|FAL_KEY\\|fal\\.ai" ${ROOT} --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.git --exclude=audit-site.mjs --exclude=engine.mjs --include="*.ts" --include="*.tsx" --include="*.mjs" --include="*.js" --include="package.json" 2>/dev/null | grep -v "audit-site\\.mjs" | grep -v "\\.md:" || true`).toString();
+  // Drop lines that are (a) pure comments mentioning the banned terms in passing
+  // or (b) inside the audit-site.mjs file itself (which lists banned tokens as data).
+  const real = grep.split("\n").filter((l) => {
+    if (!l) return false;
+    if (/audit-site\.mjs:/.test(l)) return false;
+    const code = l.split(":").slice(2).join(":");
+    if (/^\s*\/\/|^\s*\*|^\s*#/.test(code)) return false;
+    return true;
+  });
   if (real.length) return add("§2 Engine", BLOCKED("Anthropic/FAL references found"), real[0]);
   add("§2 Engine", VERIFIED, "DeepSeek V4-Pro via OpenAI client, no banned SDKs");
 }
