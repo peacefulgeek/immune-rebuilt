@@ -388,10 +388,16 @@ async function startServer() {
       .replace(/"/g, "&quot;");
   }
 
-  const port = parseInt(process.env.PORT || "3000", 10);
-  server.listen(port, () => {
+  const port = parseInt(process.env.PORT || "8080", 10);
+  const host = "0.0.0.0";
+  server.on("error", (err: NodeJS.ErrnoException) => {
     // eslint-disable-next-line no-console
-    console.log(`[${SITE_NAME}] http://localhost:${port}/  (apex=${SITE_APEX})`);
+    console.error(`[server] listen error on ${host}:${port}:`, err?.code || "", err?.message || err);
+    process.exit(1);
+  });
+  server.listen(port, host, () => {
+    // eslint-disable-next-line no-console
+    console.log(`[${SITE_NAME}] listening on ${host}:${port}  (apex=${SITE_APEX})`);
   });
 }
 
