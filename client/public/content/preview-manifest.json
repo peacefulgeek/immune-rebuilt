@@ -1,7 +1,4 @@
 {
-  "site": "Immune Rebuilt",
-  "tagline": "An honest, unhurried library for autoimmune readers.",
-  "generated_at": "2026-05-01T13:43:52Z",
   "articles": [
     {
       "slug": "what-actually-causes-autoimmune-disease",
@@ -12,7 +9,7 @@
       "category_slug": "root-causes",
       "publish_at": "2026-04-01T13:00:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-01-rootcauses.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/what-actually-causes-autoimmune-disease.webp",
       "hero_alt": "What actually causes autoimmune disease (illustration)",
       "word_count": 1702,
       "asins": [
@@ -37,7 +34,7 @@
       "category_slug": "gut-healing",
       "publish_at": "2026-04-02T14:07:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-02-leakygut.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/leaky-gut-without-the-hype.webp",
       "hero_alt": "Leaky gut without the hype (illustration)",
       "word_count": 1691,
       "asins": [
@@ -62,7 +59,7 @@
       "category_slug": "aip-and-diet",
       "publish_at": "2026-04-03T15:14:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-03-aipdiet.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/aip-protocol-honest-guide.webp",
       "hero_alt": "The AIP protocol, an honest guide (illustration)",
       "word_count": 1715,
       "asins": [
@@ -87,7 +84,7 @@
       "category_slug": "stress-and-nervous-system",
       "publish_at": "2026-04-04T16:21:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-04-stress.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/stress-and-the-hpa-axis.webp",
       "hero_alt": "Stress, the HPA axis, and autoimmune flares (illustration)",
       "word_count": 1706,
       "asins": [
@@ -112,7 +109,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-05T17:28:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-05-hashimotos.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/hashimotos-thyroid-and-the-autoimmune-mosaic.webp",
       "hero_alt": "Hashimoto's thyroiditis and the autoimmune mosaic (illustration)",
       "word_count": 1701,
       "asins": [
@@ -137,7 +134,7 @@
       "category_slug": "root-causes",
       "publish_at": "2026-04-06T18:35:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-06-mimicry.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/molecular-mimicry-explained.webp",
       "hero_alt": "Molecular mimicry, explained without the jargon (illustration)",
       "word_count": 1685,
       "asins": [
@@ -161,7 +158,7 @@
       "category_slug": "root-causes",
       "publish_at": "2026-04-07T13:42:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-07-ebv.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/ebv-and-autoimmunity.webp",
       "hero_alt": "Epstein-Barr virus and the autoimmune connection (illustration)",
       "word_count": 1671,
       "asins": [
@@ -185,7 +182,7 @@
       "category_slug": "aip-and-diet",
       "publish_at": "2026-04-08T14:49:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-08-wahls.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/wahls-protocol-mitochondria-and-greens.webp",
       "hero_alt": "The Wahls protocol, mitochondria, and greens (illustration)",
       "word_count": 1676,
       "asins": [
@@ -209,7 +206,7 @@
       "category_slug": "emotional-roots",
       "publish_at": "2026-04-09T15:56:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-09-trauma.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/childhood-trauma-and-autoimmunity.webp",
       "hero_alt": "Childhood trauma and adult autoimmunity (illustration)",
       "word_count": 1697,
       "asins": [
@@ -233,7 +230,7 @@
       "category_slug": "functional-medicine",
       "publish_at": "2026-04-10T16:03:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-10-supplements.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/functional-medicine-and-aip.webp",
       "hero_alt": "Functional medicine and AIP, what is and is not earning its keep (illustration)",
       "word_count": 1686,
       "asins": [
@@ -258,7 +255,7 @@
       "category_slug": "stress-and-nervous-system",
       "publish_at": "2026-04-11T17:10:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-11-vagus.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vagus-nerve-and-vagal-tone.webp",
       "hero_alt": "The vagus nerve and the autoimmune nervous system (illustration)",
       "word_count": 1689,
       "asins": [
@@ -282,7 +279,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-12T18:17:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-12-selenium.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/selenium-and-thyroid-antibodies.webp",
       "hero_alt": "Selenium and thyroid antibodies, what the trials actually say (illustration)",
       "word_count": 1674,
       "asins": [
@@ -306,7 +303,7 @@
       "category_slug": "functional-medicine",
       "publish_at": "2026-04-13T13:24:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-13-gimap.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/gi-map-and-stool-testing.webp",
       "hero_alt": "GI-MAP and modern stool testing, an honest review (illustration)",
       "word_count": 1678,
       "asins": [
@@ -330,7 +327,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-14T14:31:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-14-ra.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/rheumatoid-arthritis-root-causes.webp",
       "hero_alt": "Rheumatoid arthritis, the root-cause conversation (illustration)",
       "word_count": 1688,
       "asins": [
@@ -354,7 +351,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-15T15:38:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-15-lupus.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/lupus-and-photosensitivity.webp",
       "hero_alt": "Lupus, photosensitivity, and a calmer rhythm (illustration)",
       "word_count": 1681,
       "asins": [
@@ -378,7 +375,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-16T16:45:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-16-psoriasis.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/psoriasis-skin-as-the-immune-canary.webp",
       "hero_alt": "Psoriasis, the skin as the immune canary (illustration)",
       "word_count": 1688,
       "asins": [
@@ -402,7 +399,7 @@
       "category_slug": "aip-and-diet",
       "publish_at": "2026-04-17T17:52:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-17-celiac-ncgs.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/celiac-vs-non-celiac-gluten-sensitivity.webp",
       "hero_alt": "Celiac versus non-celiac gluten sensitivity (illustration)",
       "word_count": 1717,
       "asins": [
@@ -426,7 +423,7 @@
       "category_slug": "aip-and-diet",
       "publish_at": "2026-04-18T18:59:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-18-reintro.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/elimination-diet-reintroduction.webp",
       "hero_alt": "Reintroduction, the part of elimination diets most people skip (illustration)",
       "word_count": 1690,
       "asins": [
@@ -450,7 +447,7 @@
       "category_slug": "functional-medicine",
       "publish_at": "2026-04-19T13:06:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-19-igg.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/food-sensitivity-testing-honest.webp",
       "hero_alt": "Food sensitivity tests, an honest map (illustration)",
       "word_count": 1706,
       "asins": [
@@ -474,7 +471,7 @@
       "category_slug": "functional-medicine",
       "publish_at": "2026-04-20T14:13:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-20-supplements.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/supplement-essentials-for-autoimmune.webp",
       "hero_alt": "Supplement essentials for autoimmune, the short shelf (illustration)",
       "word_count": 1677,
       "asins": [
@@ -499,7 +496,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-21T15:20:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-21-mito.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/mitochondria-and-autoimmune-fatigue.webp",
       "hero_alt": "Mitochondria and autoimmune fatigue (illustration)",
       "word_count": 1662,
       "asins": [
@@ -523,7 +520,7 @@
       "category_slug": "stress-and-nervous-system",
       "publish_at": "2026-04-22T16:27:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-22-sleep.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/sleep-and-autoimmune-recovery.webp",
       "hero_alt": "Sleep and autoimmune recovery (illustration)",
       "word_count": 1666,
       "asins": [
@@ -547,7 +544,7 @@
       "category_slug": "emotional-roots",
       "publish_at": "2026-04-23T17:34:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-23-emotional.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/emotional-roots-essay.webp",
       "hero_alt": "The emotional roots of autoimmune disease (illustration)",
       "word_count": 1678,
       "asins": [
@@ -571,7 +568,7 @@
       "category_slug": "emotional-roots",
       "publish_at": "2026-04-24T18:41:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-24-somatic.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/somatic-therapies-for-autoimmune.webp",
       "hero_alt": "Somatic therapies for autoimmune patients (illustration)",
       "word_count": 1687,
       "asins": [
@@ -595,7 +592,7 @@
       "category_slug": "stress-and-nervous-system",
       "publish_at": "2026-04-25T13:48:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-25-exercise.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/exercise-and-autoimmune-disease.webp",
       "hero_alt": "Exercise without flaring, what 'movement' actually means here (illustration)",
       "word_count": 1694,
       "asins": [
@@ -619,7 +616,7 @@
       "category_slug": "root-causes",
       "publish_at": "2026-04-26T14:55:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-26-environment.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/mold-and-mycotoxin-illness.webp",
       "hero_alt": "Mold and mycotoxin illness as an autoimmune trigger (illustration)",
       "word_count": 1705,
       "asins": [
@@ -643,7 +640,7 @@
       "category_slug": "root-causes",
       "publish_at": "2026-04-27T15:02:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-27-ebv.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/heavy-metals-and-autoimmune.webp",
       "hero_alt": "Heavy metals, mercury, and the slow-burn autoimmune trigger (illustration)",
       "word_count": 1670,
       "asins": [
@@ -667,7 +664,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-28T16:09:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-28-perimenopause.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/celiac-disease-the-cleanest-story.webp",
       "hero_alt": "Celiac disease, the cleanest autoimmune story (illustration)",
       "word_count": 1662,
       "asins": [
@@ -691,7 +688,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-29T17:16:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-29-men.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/ms-multiple-sclerosis-roots.webp",
       "hero_alt": "Multiple sclerosis, roots, EBV, the Wahls story, and the literature (illustration)",
       "word_count": 1662,
       "asins": [
@@ -715,7 +712,7 @@
       "category_slug": "conditions",
       "publish_at": "2026-04-30T18:23:00.000Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/art-30-kids.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/endometriosis-and-immune-dysregulation.webp",
       "hero_alt": "Endometriosis, immune dysregulation, and the autoimmune-adjacent story (illustration)",
       "word_count": 1649,
       "asins": [
@@ -739,7 +736,7 @@
       "category_slug": null,
       "publish_at": "2026-05-01T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/genetic-load-vs-environment.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2273,
       "asins": [
@@ -764,7 +761,7 @@
       "category_slug": null,
       "publish_at": "2026-05-02T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-multi-hit-hypothesis.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2258,
       "asins": [
@@ -789,7 +786,7 @@
       "category_slug": null,
       "publish_at": "2026-05-03T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-threshold-model-of-autoimmunity.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2270,
       "asins": [
@@ -814,7 +811,7 @@
       "category_slug": null,
       "publish_at": "2026-05-04T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/infection-as-trigger-overview.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2254,
       "asins": [
@@ -839,7 +836,7 @@
       "category_slug": null,
       "publish_at": "2026-05-05T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/environmental-toxicants-and-the-immune-system.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2271,
       "asins": [
@@ -864,7 +861,7 @@
       "category_slug": null,
       "publish_at": "2026-05-06T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vitamin-d-and-autoimmunity.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2263,
       "asins": [
@@ -889,7 +886,7 @@
       "category_slug": null,
       "publish_at": "2026-05-07T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/estrogen-and-autoimmune-prevalence.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2249,
       "asins": [
@@ -914,7 +911,7 @@
       "category_slug": null,
       "publish_at": "2026-05-08T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/circadian-rhythm-and-immune-function.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2251,
       "asins": [
@@ -939,7 +936,7 @@
       "category_slug": null,
       "publish_at": "2026-05-09T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/cortisol-and-immune-dysregulation.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2252,
       "asins": [
@@ -964,7 +961,7 @@
       "category_slug": null,
       "publish_at": "2026-05-10T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/food-sensitivities-vs-allergies.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2261,
       "asins": [
@@ -989,7 +986,7 @@
       "category_slug": null,
       "publish_at": "2026-05-11T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-gut-immune-axis-overview.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2249,
       "asins": [
@@ -1014,7 +1011,7 @@
       "category_slug": null,
       "publish_at": "2026-05-12T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/dental-amalgams-and-mercury-fears.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2260,
       "asins": [
@@ -1039,7 +1036,7 @@
       "category_slug": null,
       "publish_at": "2026-05-13T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-02-gut-river.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/breast-implants-and-autoimmune-symptoms.webp",
       "hero_alt": "Soft watercolor abstract: a healing-green river of microbiome flora",
       "word_count": 2264,
       "asins": [
@@ -1064,7 +1061,7 @@
       "category_slug": null,
       "publish_at": "2026-05-14T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/childhood-infections-and-adult-autoimmunity.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2248,
       "asins": [
@@ -1089,7 +1086,7 @@
       "category_slug": null,
       "publish_at": "2026-05-15T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/c-section-birth-and-immune-development.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2251,
       "asins": [
@@ -1114,7 +1111,7 @@
       "category_slug": null,
       "publish_at": "2026-05-16T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/antibiotic-exposure-as-cumulative-load.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2265,
       "asins": [
@@ -1139,7 +1136,7 @@
       "category_slug": null,
       "publish_at": "2026-05-17T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-hygiene-hypothesis-update.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2259,
       "asins": [
@@ -1164,7 +1161,7 @@
       "category_slug": null,
       "publish_at": "2026-05-18T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vaccine-questions-and-autoimmunity-risk.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2236,
       "asins": [
@@ -1189,7 +1186,7 @@
       "category_slug": null,
       "publish_at": "2026-05-19T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/genetic-testing-23andme-and-autoimmunity.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2241,
       "asins": [
@@ -1214,7 +1211,7 @@
       "category_slug": null,
       "publish_at": "2026-05-20T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/hla-genes-and-autoimmune-disease.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2264,
       "asins": [
@@ -1239,7 +1236,7 @@
       "category_slug": null,
       "publish_at": "2026-05-21T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/microchimerism-and-pregnancy.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2260,
       "asins": [
@@ -1264,7 +1261,7 @@
       "category_slug": null,
       "publish_at": "2026-05-22T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-old-friends-hypothesis.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2246,
       "asins": [
@@ -1289,7 +1286,7 @@
       "category_slug": null,
       "publish_at": "2026-05-23T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/nature-deficit-and-immune-tolerance.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2256,
       "asins": [
@@ -1314,7 +1311,7 @@
       "category_slug": null,
       "publish_at": "2026-05-24T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/mast-cells-as-mediators.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2243,
       "asins": [
@@ -1339,7 +1336,7 @@
       "category_slug": null,
       "publish_at": "2026-05-25T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/th17-and-treg-balance.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2269,
       "asins": [
@@ -1364,7 +1361,7 @@
       "category_slug": null,
       "publish_at": "2026-05-26T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/complement-system-and-lupus.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2241,
       "asins": [
@@ -1389,7 +1386,7 @@
       "category_slug": null,
       "publish_at": "2026-05-27T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/inflammaging-and-late-onset-autoimmunity.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2248,
       "asins": [
@@ -1414,7 +1411,7 @@
       "category_slug": null,
       "publish_at": "2026-05-28T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-autoimmune-clusters-explained.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2238,
       "asins": [
@@ -1439,7 +1436,7 @@
       "category_slug": null,
       "publish_at": "2026-05-29T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/epigenetics-of-autoimmunity.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2257,
       "asins": [
@@ -1464,7 +1461,7 @@
       "category_slug": null,
       "publish_at": "2026-05-30T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/microbial-translocation-as-fuel.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2248,
       "asins": [
@@ -1489,7 +1486,7 @@
       "category_slug": null,
       "publish_at": "2026-05-31T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/genetic-load-vs-environment-part-2-8ecc34.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2328,
       "asins": [
@@ -1514,7 +1511,7 @@
       "category_slug": null,
       "publish_at": "2026-06-01T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-multi-hit-hypothesis-part-2-90226b.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2313,
       "asins": [
@@ -1539,7 +1536,7 @@
       "category_slug": null,
       "publish_at": "2026-06-02T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-threshold-model-of-autoimmunity-part-2-71d1eb.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2328,
       "asins": [
@@ -1564,7 +1561,7 @@
       "category_slug": null,
       "publish_at": "2026-06-03T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/infection-as-trigger-overview-part-2-e1f591.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2306,
       "asins": [
@@ -1589,7 +1586,7 @@
       "category_slug": null,
       "publish_at": "2026-06-04T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/environmental-toxicants-and-the-immune-system-part-2-c2963d.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2323,
       "asins": [
@@ -1614,7 +1611,7 @@
       "category_slug": null,
       "publish_at": "2026-06-05T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-26-clipboard-notes.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vitamin-d-and-autoimmunity-part-2-8d7eb8.webp",
       "hero_alt": "Soft watercolor of a clipboard with cream paper notes",
       "word_count": 2323,
       "asins": [
@@ -1639,7 +1636,7 @@
       "category_slug": null,
       "publish_at": "2026-06-06T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/estrogen-and-autoimmune-prevalence-part-2-e9f207.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2299,
       "asins": [
@@ -1664,7 +1661,7 @@
       "category_slug": null,
       "publish_at": "2026-06-07T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/circadian-rhythm-and-immune-function-part-2-997e57.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2296,
       "asins": [
@@ -1689,7 +1686,7 @@
       "category_slug": null,
       "publish_at": "2026-06-08T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/cortisol-and-immune-dysregulation-part-2-e26e17.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2309,
       "asins": [
@@ -1714,7 +1711,7 @@
       "category_slug": null,
       "publish_at": "2026-06-09T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/food-sensitivities-vs-allergies-part-2-ac50b1.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2316,
       "asins": [
@@ -1739,7 +1736,7 @@
       "category_slug": null,
       "publish_at": "2026-06-10T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-26-clipboard-notes.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-gut-immune-axis-overview-part-2-747e4d.webp",
       "hero_alt": "Soft watercolor of a clipboard with cream paper notes",
       "word_count": 2306,
       "asins": [
@@ -1764,7 +1761,7 @@
       "category_slug": null,
       "publish_at": "2026-06-11T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/dental-amalgams-and-mercury-fears-part-2-bde326.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2314,
       "asins": [
@@ -1789,7 +1786,7 @@
       "category_slug": null,
       "publish_at": "2026-06-12T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/breast-implants-and-autoimmune-symptoms-part-2-df2fbf.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2320,
       "asins": [
@@ -1814,7 +1811,7 @@
       "category_slug": null,
       "publish_at": "2026-06-13T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/childhood-infections-and-adult-autoimmunity-part-2-9e0ba5.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2309,
       "asins": [
@@ -1839,7 +1836,7 @@
       "category_slug": null,
       "publish_at": "2026-06-14T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-26-clipboard-notes.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/c-section-birth-and-immune-development-part-2-c912e4.webp",
       "hero_alt": "Soft watercolor of a clipboard with cream paper notes",
       "word_count": 2306,
       "asins": [
@@ -1864,7 +1861,7 @@
       "category_slug": null,
       "publish_at": "2026-06-15T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/antibiotic-exposure-as-cumulative-load-part-2-5ce0b8.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2315,
       "asins": [
@@ -1889,7 +1886,7 @@
       "category_slug": null,
       "publish_at": "2026-06-16T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-hygiene-hypothesis-update-part-2-b3dda2.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2317,
       "asins": [
@@ -1914,7 +1911,7 @@
       "category_slug": null,
       "publish_at": "2026-06-17T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vaccine-questions-and-autoimmunity-risk-part-2-ad5b47.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2296,
       "asins": [
@@ -1939,7 +1936,7 @@
       "category_slug": null,
       "publish_at": "2026-06-18T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/genetic-testing-23andme-and-autoimmunity-part-2-03e2b0.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2302,
       "asins": [
@@ -1964,7 +1961,7 @@
       "category_slug": null,
       "publish_at": "2026-06-19T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/hla-genes-and-autoimmune-disease-part-2-c13113.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2320,
       "asins": [
@@ -1989,7 +1986,7 @@
       "category_slug": null,
       "publish_at": "2026-06-20T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-37-abstract-flow.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/microchimerism-and-pregnancy-part-2-c4e460.webp",
       "hero_alt": "Soft watercolor abstract of flowing healing-green and amber ribbons",
       "word_count": 2310,
       "asins": [
@@ -2014,7 +2011,7 @@
       "category_slug": null,
       "publish_at": "2026-06-21T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-old-friends-hypothesis-part-2-7852b6.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2306,
       "asins": [
@@ -2039,7 +2036,7 @@
       "category_slug": null,
       "publish_at": "2026-06-22T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-26-clipboard-notes.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/nature-deficit-and-immune-tolerance-part-2-2b80a0.webp",
       "hero_alt": "Soft watercolor of a clipboard with cream paper notes",
       "word_count": 2303,
       "asins": [
@@ -2064,7 +2061,7 @@
       "category_slug": null,
       "publish_at": "2026-06-23T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-26-clipboard-notes.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/mast-cells-as-mediators-part-2-be5e15.webp",
       "hero_alt": "Soft watercolor of a clipboard with cream paper notes",
       "word_count": 2289,
       "asins": [
@@ -2089,7 +2086,7 @@
       "category_slug": null,
       "publish_at": "2026-06-24T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/th17-and-treg-balance-part-2-f164bf.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2318,
       "asins": [
@@ -2114,7 +2111,7 @@
       "category_slug": null,
       "publish_at": "2026-06-25T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-02-gut-river.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/complement-system-and-lupus-part-2-eb2d7e.webp",
       "hero_alt": "Soft watercolor abstract: a healing-green river of microbiome flora",
       "word_count": 2298,
       "asins": [
@@ -2139,7 +2136,7 @@
       "category_slug": null,
       "publish_at": "2026-06-26T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/inflammaging-and-late-onset-autoimmunity-part-2-035c46.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2313,
       "asins": [
@@ -2164,7 +2161,7 @@
       "category_slug": null,
       "publish_at": "2026-06-27T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-autoimmune-clusters-explained-part-2-9ee145.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2291,
       "asins": [
@@ -2189,7 +2186,7 @@
       "category_slug": null,
       "publish_at": "2026-06-28T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/epigenetics-of-autoimmunity-part-2-aa056a.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2308,
       "asins": [
@@ -2214,7 +2211,7 @@
       "category_slug": null,
       "publish_at": "2026-06-29T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-01-roots.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/microbial-translocation-as-fuel-part-2-b06a4c.webp",
       "hero_alt": "Soft watercolor of plant roots threading through warm earth, healing green",
       "word_count": 2313,
       "asins": [
@@ -2239,7 +2236,7 @@
       "category_slug": null,
       "publish_at": "2026-06-30T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/genetic-load-vs-environment-for-women-043a6b.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2322,
       "asins": [
@@ -2264,7 +2261,7 @@
       "category_slug": null,
       "publish_at": "2026-07-01T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-02-gut-river.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-multi-hit-hypothesis-for-women-5be737.webp",
       "hero_alt": "Soft watercolor abstract: a healing-green river of microbiome flora",
       "word_count": 2300,
       "asins": [
@@ -2289,7 +2286,7 @@
       "category_slug": null,
       "publish_at": "2026-07-02T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-15-journal-pen.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/the-threshold-model-of-autoimmunity-for-women-606854.webp",
       "hero_alt": "Soft watercolor of an open journal and pen on cream paper",
       "word_count": 2327,
       "asins": [
@@ -2314,7 +2311,7 @@
       "category_slug": null,
       "publish_at": "2026-07-03T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/infection-as-trigger-overview-for-women-2e73bc.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2299,
       "asins": [
@@ -2339,7 +2336,7 @@
       "category_slug": null,
       "publish_at": "2026-07-04T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-36-sunrise-field.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/environmental-toxicants-and-the-immune-system-for-women-723dc9.webp",
       "hero_alt": "Soft watercolor of a sunrise over a meadow with healing grasses",
       "word_count": 2324,
       "asins": [
@@ -2364,7 +2361,7 @@
       "category_slug": null,
       "publish_at": "2026-07-05T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-02-gut-river.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/vitamin-d-and-autoimmunity-for-women-96e34e.webp",
       "hero_alt": "Soft watercolor abstract: a healing-green river of microbiome flora",
       "word_count": 2310,
       "asins": [
@@ -2389,7 +2386,7 @@
       "category_slug": null,
       "publish_at": "2026-07-06T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/estrogen-and-autoimmune-prevalence-for-women-01f44c.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2290,
       "asins": [
@@ -2414,7 +2411,7 @@
       "category_slug": null,
       "publish_at": "2026-07-07T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-30-foggy-morning.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/circadian-rhythm-and-immune-function-for-women-b544aa.webp",
       "hero_alt": "Soft watercolor of a foggy morning forest, peaceful",
       "word_count": 2303,
       "asins": [
@@ -2439,7 +2436,7 @@
       "category_slug": null,
       "publish_at": "2026-07-08T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-17-sunlight-breath.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/cortisol-and-immune-dysregulation-for-women-55ec40.webp",
       "hero_alt": "Soft watercolor of sunlight through trees, breath as light",
       "word_count": 2297,
       "asins": [
@@ -2464,7 +2461,7 @@
       "category_slug": null,
       "publish_at": "2026-07-09T18:23:00Z",
       "status": "published",
-      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/queue/q-21-forest-walk.webp",
+      "hero_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/article-heroes/food-sensitivities-vs-allergies-for-women-58fdf2.webp",
       "hero_alt": "Soft watercolor of bare feet walking on a forest path",
       "word_count": 2307,
       "asins": [
@@ -2480,14 +2477,5 @@
       ],
       "body_url": "https://conscious-elder.b-cdn.net/immune-rebuilt/articles/food-sensitivities-vs-allergies-for-women-58fdf2.json"
     }
-  ],
-  "count": 100,
-  "last_built": "2026-05-26T22:07:48Z",
-  "body_storage": {
-    "kind": "bunny-cdn",
-    "pull_zone": "https://conscious-elder.b-cdn.net",
-    "prefix": "/immune-rebuilt/articles/",
-    "format": "json",
-    "schema": "v1"
-  }
+  ]
 }
