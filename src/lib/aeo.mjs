@@ -42,11 +42,16 @@ export function buildSitemapXml(rows, siteApex) {
     { loc: `https://${siteApex}/privacy`, priority: "0.5" },
     { loc: `https://${siteApex}/contact`, priority: "0.5" },
   ];
-  const articleEntries = (rows || []).map((r) => ({
-    loc: `https://${siteApex}/articles/${r.slug}`,
-    lastmod: (r.last_modified_at || r.published_at || new Date()).toISOString(),
-    priority: "0.8",
-  }));
+  const articleEntries = (rows || []).map((r) => {
+    const raw = r.last_modified_at || r.published_at || new Date();
+    const d = raw instanceof Date ? raw : new Date(raw);
+    const lastmod = isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
+    return {
+      loc: `https://${siteApex}/articles/${r.slug}`,
+      lastmod,
+      priority: "0.8",
+    };
+  });
   const all = [
     ...staticPages.map(
       (p) =>

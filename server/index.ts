@@ -159,9 +159,11 @@ async function startServer() {
   });
 
   // ── /llms-full.txt — full text dump. §16D.
+  // We cap to top 50 by recency so the response stays under 5MB and the route
+  // doesn't time out cold-hydrating 100 bodies from Bunny on first hit.
   app.get("/llms-full.txt", async (_req, res) => {
     try {
-      const rows = await listPublishedArticles({ limit: 1000, includeBody: true });
+      const rows = await listPublishedArticles({ limit: 50, includeBody: true });
       const txt = buildLlmsFullTxt(rows, { siteApex: SITE_APEX, siteName: SITE_NAME });
       res.type("text/plain").set("Cache-Control", "public, max-age=3600").send(txt);
     } catch (e: any) {
