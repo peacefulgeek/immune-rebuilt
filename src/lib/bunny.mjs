@@ -13,13 +13,55 @@
 import fs from "node:fs";
 import path from "node:path";
 
+// Accept both env names because production was configured with BUNNY_PULL_ZONE
+// (no _URL suffix) and the original code expected BUNNY_PULL_ZONE_URL.
+const PULL_ZONE_RAW = (process.env.BUNNY_PULL_ZONE_URL || process.env.BUNNY_PULL_ZONE || "").replace(/\/+$/, "");
+
 export const BUNNY = {
-  pullZoneUrl:    (process.env.BUNNY_PULL_ZONE_URL || "").replace(/\/+$/, ""),
+  pullZoneUrl:    PULL_ZONE_RAW,
   storageZone:    process.env.BUNNY_STORAGE_ZONE || "",
   storageKey:     process.env.BUNNY_STORAGE_KEY || "",
   storageHost:    process.env.BUNNY_STORAGE_HOST || "storage.bunnycdn.com",
+  // For uploads we need pullZone + storageZone + key; for reads we only need pullZone.
   enabled() { return Boolean(this.pullZoneUrl && this.storageZone && this.storageKey); },
+  readEnabled() { return Boolean(this.pullZoneUrl); },
 };
+
+/**
+ * Fetch an article body JSON from Bunny. Used by the server when manifest entries
+ * carry `body_url` instead of inline `body`. Returns null on miss/error so callers
+ * can fall back gracefully.
+ * @param {string} bodyUrl - absolute URL like https://<zone>.b-cdn.net/immune-rebuilt/articles/<slug>.json
+ */
+export async function fetchArticleJson(bodyUrl) {
+  if (!bodyUrl || typeof bodyUrl !== "string") return null;
+  try {
+    const res = await fetch(bodyUrl, { method: "GET" });
+    if (!res.ok) return null;
+    const j = await res.json();
+    return j || null;
+  } catch {
+    return null;
+  }
+}
+
+// In-memory LRU so re-renders of the same article during a single request don't refetch.
+const _articleCache = new Map();
+const _ARTICLE_CACHE_MAX = 64;
+export async function fetchArticleJsonCached(bodyUrl) {
+  if (!bodyUrl) return null;
+  const hit = _articleCache.get(bodyUrl);
+  if (hit) return hit;
+  const j = await fetchArticleJson(bodyUrl);
+  if (j) {
+    if (_articleCache.size >= _ARTICLE_CACHE_MAX) {
+      const firstKey = _articleCache.keys().next().value;
+      _articleCache.delete(firstKey);
+    }
+    _articleCache.set(bodyUrl, j);
+  }
+  return j;
+}
 
 // Resolve a stored asset key (e.g. "art/01-rootcauses.webp") to a public URL.
 // In preview without Bunny envs, fall through to existing paths if a manifest

@@ -10,7 +10,19 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { execSync } from "node:child_process";
 import { getPool, query } from "../src/lib/db.mjs";
-import { findImagesInRepo, BUNNY } from "../src/lib/bunny.mjs";
+import { findImagesInRepo, BUNNY, fetchArticleJson } from "../src/lib/bunny.mjs";
+
+async function bodyOf(a) {
+  if (a && a.body && String(a.body).length > 0) return a.body;
+  if (a && a.body_url) {
+    const j = await fetchArticleJson(a.body_url);
+    return (j && j.body) || "";
+  }
+  return "";
+}
+async function hydrateArts(arts) {
+  return Promise.all(arts.map(async (a) => ({ ...a, body: await bodyOf(a) })));
+}
 import { checkText, HARD_BANNED_LOWER } from "../src/lib/gate.mjs";
 import { EngineConfig } from "../src/lib/engine.mjs";
 import { SITE } from "../src/lib/voice.mjs";
@@ -147,7 +159,8 @@ function articleAsins(a) {
 async function s10() {
   const manifest = readJsonSafe(path.join(ROOT, "client/public/content/preview-manifest.json"));
   if (!manifest) return add("§10 ASIN attribution", BLOCKED("manifest missing"));
-  const arts = manifestArticles(manifest);
+  const arts0 = manifestArticles(manifest);
+  const arts = await hydrateArts(arts0);
   let withASINs = 0;
   for (const a of arts) {
     if (articleAsins(a).length) withASINs++;
@@ -227,7 +240,8 @@ async function s17() {
 async function s18() {
   const manifest = readJsonSafe(path.join(ROOT, "client/public/content/preview-manifest.json"));
   if (!manifest) return add("§18 Seed gate", BLOCKED("manifest missing"));
-  const arts = manifestArticles(manifest);
+  const arts0 = manifestArticles(manifest);
+  const arts = await hydrateArts(arts0);
   let bad = 0;
   for (const a of arts) {
     const r = checkText(a.body || "");
@@ -244,7 +258,8 @@ async function s18() {
 async function s19() {
   const manifest = readJsonSafe(path.join(ROOT, "client/public/content/preview-manifest.json"));
   if (!manifest) return add("§19 Link discipline", BLOCKED("manifest missing"));
-  const arts = manifestArticles(manifest);
+  const arts0 = manifestArticles(manifest);
+  const arts = await hydrateArts(arts0);
   let bad = 0;
   for (const a of arts) {
     const r = checkText(a.body || "");

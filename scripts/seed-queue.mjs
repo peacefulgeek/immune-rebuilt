@@ -6,6 +6,16 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getPool, query } from "../src/lib/db.mjs";
+import { fetchArticleJson } from "../src/lib/bunny.mjs";
+
+async function hydrateBody(a) {
+  if (a.body && String(a.body).length > 0) return a.body;
+  if (a.body_url) {
+    const j = await fetchArticleJson(a.body_url);
+    if (j && j.body) return j.body;
+  }
+  return "";
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -33,6 +43,7 @@ async function main() {
   let inserted = 0, skipped = 0;
 
   for (const q of items) {
+    const body = await hydrateBody(q);
     const r = await query(
       `INSERT INTO article_queue
          (slug, title, category, angle, asins, related_slugs,
@@ -49,7 +60,7 @@ async function main() {
         q.asins || [],
         q.related || [],
         q.excerpt,
-        q.body,
+        body,
         q.hero_url,
         q.hero_alt || q.title,
         q.publish_at,

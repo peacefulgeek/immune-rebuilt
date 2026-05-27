@@ -6,6 +6,16 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { getPool, query } from "../src/lib/db.mjs";
 import { checkText } from "../src/lib/gate.mjs";
+import { fetchArticleJson } from "../src/lib/bunny.mjs";
+
+async function hydrateBody(a) {
+  if (a.body && String(a.body).length > 0) return a.body;
+  if (a.body_url) {
+    const j = await fetchArticleJson(a.body_url);
+    if (j && j.body) return j.body;
+  }
+  return "";
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -31,10 +41,11 @@ async function main() {
   let inserted = 0, updated = 0, skipped = 0;
 
   for (const a of items) {
-    const gate = checkText(a.body || "");
+    const body = await hydrateBody(a);
+    const gate = checkText(body || "");
     // Seed entries are pre-vetted; we still record gate meta. We do NOT block seed
     // on internal-link counts because the manifest is the canonical seed source.
-    const wc = a.word_count || (String(a.body || "").split(/\s+/).length);
+    const wc = a.word_count || (String(body || "").split(/\s+/).length);
     const r = await query(
       `INSERT INTO articles (slug, title, category, tags, excerpt, body,
                              hero_url, word_count, status, published_at,
@@ -59,7 +70,7 @@ async function main() {
         a.category,
         a.tags || [],
         a.excerpt,
-        a.body,
+        body,
         a.hero_url,
         wc,
         a.published_at,

@@ -26,7 +26,8 @@ export const SITE = {
     "childhood adversity and autoimmunity",
     "trauma-informed recovery",
   ],
-  amazonAffiliateTag: "spankyspinola-20",
+  // AMAZON_TAG is the canonical env. AMAZON_AFFILIATE_TAG is accepted for backwards compat.
+  amazonAffiliateTag: process.env.AMAZON_TAG || process.env.AMAZON_AFFILIATE_TAG || "spankyspinola-20",
 };
 
 export const SYSTEM_PROMPT = `
