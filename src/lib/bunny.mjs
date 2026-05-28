@@ -36,7 +36,17 @@ export const BUNNY = {
 export async function fetchArticleJson(bodyUrl) {
   if (!bodyUrl || typeof bodyUrl !== "string") return null;
   try {
-    const res = await fetch(bodyUrl, { method: "GET" });
+    // Cache-bust by minute so Bunny pull-zone TTL doesn't pin stale article bodies after a Final-Pass rewrite.
+    // The minute granularity keeps the cache effective for ~60s but lets us roll out content updates fast.
+    const u = new URL(bodyUrl);
+    if (!u.searchParams.has("v")) {
+      const minuteStamp = Math.floor(Date.now() / 60000);
+      u.searchParams.set("v", String(minuteStamp));
+    }
+    const res = await fetch(u.toString(), {
+      method: "GET",
+      headers: { "Cache-Control": "no-cache" },
+    });
     if (!res.ok) return null;
     const j = await res.json();
     return j || null;

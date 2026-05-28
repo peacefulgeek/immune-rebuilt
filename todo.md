@@ -70,3 +70,78 @@
 - [ ] webdev_save_checkpoint
 - [ ] Concise report
 
+
+
+---
+
+# Final-Pass Scope — BacklinkWebsites
+
+Status legend: `[ ]` todo · `[~]` doing · `[x]` FIXED · `[V]` VERIFIED ALREADY GOOD · `[B]` BLOCKED + reason
+
+## §1 Engine — Claude
+- [ ] Add `CLAUDE_API_KEY` to .env.example + RAILWAY-ENV.md (placeholder; do NOT commit live key)
+- [ ] Replace DeepSeek calls with Claude `claude-sonnet-4-6` everywhere (engine.mjs, refresh, rewrite)
+- [ ] Engine guard accepts `api.anthropic.com` and rejects others when CLAUDE_API_KEY is set
+
+## §2 Voice rules across 100 published article bodies
+- [ ] Strip em-dashes (— and –) → " - "
+- [ ] Replace banned single words (case-insensitive) with non-banned synonyms
+- [ ] Strip banned filler phrases verbatim
+- [ ] Verify ≥2 conversational openers per article (first 3 paragraphs)
+
+## §3 E-E-A-T per article
+- [ ] TL;DR `<section data-tldr="ai-overview" aria-label="In short">` 3 sentences ≤32 words each
+- [ ] ≥1 self-referencing phrase woven into body
+- [ ] ≥3 internal links with varied anchors in prose
+- [ ] ≥1 outbound link `rel="nofollow noopener" target="_blank"` to .gov/.edu/NIH/CDC/WHO/PubMed/Nature/ScienceDirect
+- [ ] Visible last-updated date in byline w/ datetime attribute
+- [ ] Bottom byline block w/ credential, datetime, 1-2 warm self-ref sentences
+
+## §4 AEO / SSR head + JSON-LD
+- [ ] Canonical w/ UTM/fbclid/gclid/mc_eid stripped
+- [ ] Robots meta `index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1`
+- [ ] OG + Twitter card per page (twitter:card=summary_large_image)
+- [ ] Article JSON-LD per article (incl. SpeakableSpecification → TL;DR)
+- [ ] BreadcrumbList JSON-LD per article
+- [ ] FAQPage JSON-LD if real Q-shaped headings (cap 6)
+- [ ] HowTo JSON-LD if ordered steps (mutually exclusive w/ MedicalCondition)
+- [ ] WebSite JSON-LD + SearchAction on home
+- [ ] Organization JSON-LD sitewide
+- [ ] AboutPage + Organization on /about
+- [ ] CollectionPage + ItemList on /articles
+- [ ] Person JSON-LD for author
+- [ ] All head + JSON-LD server-rendered before React shell
+
+## §5 Routes
+- [ ] /sitemap.xml: all published, ISO-8601 lastmod, newest first
+- [ ] /robots.txt: GPTBot, ChatGPT-User, OAI-SearchBot, ClaudeBot, Claude-Web, anthropic-ai, PerplexityBot, Perplexity-User, Google-Extended, Bingbot, CCBot, Applebot, Applebot-Extended, DuckAssistBot, Meta-ExternalAgent, YouBot, MistralAI-User, Cohere-AI; sitemap+llms advertised at bottom
+- [ ] /llms.txt: markdown index of all published articles, by category
+- [ ] /llms-full.txt: full corpus, frontmatter-delimited
+
+## §6 Storage
+- [ ] Confirm articles stored as JSON on Bunny only (no DB body)
+- [ ] DB schema doc updated to: slug, status, published_at, queued_at, last_modified_at, hero_url, category, tags, asins_used, bunny_url
+
+## §7 Counts + dates
+- [ ] 30-100 published / 400-500 queued (currently 100/430 ✓)
+- [ ] Backdate published_at across prior 3 months
+
+## §8 Quarterly refresh cron
+- [ ] Calls Claude, runs quality gate, updates Bunny + byline date + dateModified
+
+## §9 Bylines
+- [ ] Every article: warm credential line + datetime matching published_at + 1-2 warm self-ref sentences specific to topic
+
+## §10 Leakage
+- [ ] Zero `paulwagner.com` or `Paul Wagner` references anywhere
+
+## §11 Validation
+- [ ] curl GPTBot UA confirms head + JSON-LD before `<div id="root">`
+- [ ] /sitemap.xml 200 + only published
+- [ ] /llms.txt 200 + Content-Type text/markdown
+- [ ] /robots.txt 200 + names every AI crawler
+- [ ] Sample article passes Schema.org shape
+
+## §12 Push
+- [ ] Commit + force-push to peacefulgeek/immune-rebuilt
+- [ ] Deliver FIXED/VERIFIED/BLOCKED report

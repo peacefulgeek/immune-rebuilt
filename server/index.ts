@@ -20,6 +20,9 @@ import {
   buildWebsiteJsonLd,
   buildPersonJsonLd,
   buildImageObjectJsonLd,
+  buildHowToJsonLd,
+  buildAboutPageJsonLd,
+  buildCollectionPageJsonLd,
 } from "../src/lib/articleJsonLd.mjs";
 import { buildSocialMeta } from "../src/lib/socialMeta.mjs";
 import {
@@ -282,7 +285,13 @@ async function startServer() {
       ld.push(buildBreadcrumbJsonLd(ctx.article, { siteApex: SITE_APEX }));
       const faq = buildFaqJsonLd(ctx.article);
       if (faq) ld.push(faq);
+      const howto = buildHowToJsonLd(ctx.article, { siteApex: SITE_APEX });
+      if (howto) ld.push(howto);
       if (ctx.article.hero_url) ld.push(buildImageObjectJsonLd(ctx.article.hero_url, { siteApex: SITE_APEX, author: SITE_AUTHOR }));
+    } else if (ctx.kind === "about") {
+      ld.push(buildAboutPageJsonLd({ siteApex: SITE_APEX, siteName: SITE_NAME, author: SITE_AUTHOR }));
+    } else if (ctx.kind === "list" && Array.isArray(ctx.articles)) {
+      ld.push(buildCollectionPageJsonLd(ctx.articles, { siteApex: SITE_APEX, siteName: SITE_NAME, category: ctx.category }));
     }
 
     const ldBlocks = ld
@@ -346,9 +355,16 @@ async function startServer() {
         // DB unreachable — fall through to home shell so the site still renders.
       }
     } else if (req.path === "/articles") {
-      ctx = { req, kind: "list", title: `Articles , ${SITE_NAME}`, description: "Every essay on autoimmune root causes, AIP, leaky gut, functional medicine, and the emotional roots underneath." };
+      let articles: any[] = [];
+      try {
+        articles = await listPublishedArticles({ limit: 50 });
+      } catch {
+        articles = [];
+      }
+      const cat = (req.query?.category as string) || undefined;
+      ctx = { req, kind: "list", articles, category: cat, title: `Articles , ${SITE_NAME}`, description: "Every essay on autoimmune root causes, AIP, leaky gut, functional medicine, and the emotional roots underneath." };
     } else if (req.path === "/about") {
-      ctx = { req, kind: "page", title: `About , ${SITE_NAME}`, description: `Why ${SITE_NAME} exists. Who writes here. What we believe about chronic illness.` };
+      ctx = { req, kind: "about", title: `About , ${SITE_NAME}`, description: `Why ${SITE_NAME} exists. Who writes here. What we believe about chronic illness.` };
     } else if (req.path === "/disclosures") {
       ctx = { req, kind: "page", title: `Disclosures , ${SITE_NAME}`, description: "Affiliate disclosure, medical disclaimer, and editorial standards for Immune Rebuilt." };
     } else if (req.path === "/privacy") {
@@ -376,7 +392,7 @@ async function startServer() {
     const ctx = {
       req,
       kind: "notfound",
-      title: `Not found — ${SITE_NAME}`,
+      title: `Not found - ${SITE_NAME}`,
       description: `That page isn't on ${SITE_NAME}.`,
     };
     res.status(404).type("text/html").send(injectHead(raw, ctx));

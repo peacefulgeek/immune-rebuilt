@@ -153,6 +153,87 @@ export function buildFaqJsonLd(article) {
   };
 }
 
+export function buildHowToJsonLd(article, { siteApex }) {
+  const body = article.body || "";
+  const reHeading = /<h([234])[^>]*>([^<]+)<\/h\1>\s*([\s\S]*?)(?=<h[234][^>]*>|<\/article>|$)/gi;
+  const steps = [];
+  let m;
+  while ((m = reHeading.exec(body)) !== null && steps.length < 8) {
+    const heading = m[2].trim();
+    if (!/^(step|day|week|month|how|first|next|then|begin|start|finally)/i.test(heading)) continue;
+    const text = htmlToPlainText(m[3] || "")
+      .split(/\n+/)
+      .map((s) => s.trim())
+      .filter(Boolean)
+      .slice(0, 2)
+      .join(" ");
+    if (!text) continue;
+    steps.push({
+      "@type": "HowToStep",
+      position: steps.length + 1,
+      name: heading,
+      text: text.slice(0, 500),
+      url: `https://${siteApex}/articles/${article.slug}#step-${steps.length + 1}`,
+    });
+  }
+  if (steps.length < 2) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: `How to: ${article.title}`,
+    description: (article.excerpt || article.title).slice(0, 200),
+    step: steps,
+  };
+}
+
+export function buildAboutPageJsonLd({ siteApex, siteName, author }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    url: `https://${siteApex}/about`,
+    name: `About ${siteName}`,
+    description:
+      `${siteName} is a long-form, voice-driven archive on the root causes of autoimmune disease. 
+      Editorial standards favor patterns observed across decades of clinical literature, named honestly, and written for people in flares.`,
+    publisher: {
+      "@type": "Organization",
+      name: siteName,
+      url: `https://${siteApex}/`,
+      logo: { "@type": "ImageObject", url: `https://${siteApex}/favicon.svg` },
+    },
+    author: {
+      "@type": "Person",
+      name: author,
+    },
+  };
+}
+
+export function buildCollectionPageJsonLd(articles, { siteApex, siteName, category }) {
+  const list = articles.slice(0, 50).map((a, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    url: `https://${siteApex}/articles/${a.slug}`,
+    name: a.title,
+  }));
+  const name = category ? `${category} - ${siteName}` : `Articles - ${siteName}`;
+  const url = category
+    ? `https://${siteApex}/articles?category=${encodeURIComponent(category)}`
+    : `https://${siteApex}/articles`;
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    url,
+    name,
+    isPartOf: { "@type": "WebSite", url: `https://${siteApex}/`, name: siteName },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListOrder: "https://schema.org/ItemListOrderDescending",
+      numberOfItems: list.length,
+      itemListElement: list,
+    },
+  };
+}
+
 export function buildImageObjectJsonLd(heroUrl, { siteApex, author }) {
   return {
     "@context": "https://schema.org",
