@@ -48,11 +48,11 @@ async function bootCrons() {
     console.log("[boot] AUTO_GEN_ENABLED=false — crons not scheduled");
     return;
   }
-  cron.schedule("17 13 * * *", () => { run("publish", ...script("cron-publish.mjs")); }, { timezone: "UTC" });
+  cron.schedule("17 13 * * 1-5", () => { run("publish", ...script("cron-publish.mjs")); }, { timezone: "UTC" });
   cron.schedule("11 4 1 * *", () => { run("refresh-monthly", ...script("refresh-monthly.mjs")); }, { timezone: "UTC" });
   cron.schedule("23 5 1 1,4,7,10 *", () => { run("refresh-quarterly", ...script("refresh-quarterly.mjs")); }, { timezone: "UTC" });
   cron.schedule("9 12 * * 1", () => { run("spotlight", ...script("product-spotlight.mjs")); }, { timezone: "UTC" });
-  console.log("[boot] crons scheduled: daily 13:17 UTC publish, monthly refresh, quarterly refresh, weekly spotlight");
+  console.log("[boot] crons scheduled: weekday 13:17 UTC publish (Mon-Fri), monthly refresh, quarterly refresh, weekly spotlight");
 }
 
 async function main() {
